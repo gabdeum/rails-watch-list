@@ -1,0 +1,25 @@
+<div class="lists-cover">
+  <%= image_tag "movie-theatre-cover.jpg", alt: "Movie theatre cover picture", height: 450 %>
+  <div class="cover-text">
+    <h1>My lists of movies</h1>
+    <p>Add any kind of movie lists</p>
+  </div>
+</div>
+<div class="container">
+  <div class="mx-5">
+    <div class="flex-lists-title">
+      <h4>My lists</h2>
+      <%= link_to "New list", new_list_path, class: "btn btn-primary" %>
+    </div>
+    <div class="lists-grid">
+      <% @lists.each do |list| %>
+        <a href="lists/<%= list.id %>">
+          <div class="card-simple">
+            <img src="<%= list.url_picture %>" alt="List poster">
+            <h5><%= list.name %></h5>
+          </div>
+        </a>
+      <% end %>
+    </div>
+  </div>
+</div>

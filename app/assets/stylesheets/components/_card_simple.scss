@@ -1,0 +1,32 @@
+.card-simple {
+
+  position: relative;
+  height: 200px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  border-radius: 2px;
+  overflow: hidden;
+  filter: grayscale(1);
+
+  &:hover {
+    filter: grayscale(0);
+  }
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  h5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%); /* iOS */
+    margin: 0;
+    font-size: bold;
+    color: $light-gray;
+    text-align: center;
+  }
+
+}

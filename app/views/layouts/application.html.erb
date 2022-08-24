@@ -11,6 +11,16 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg bg-light sticky-top">
+      <div class="container-fluid">
+        <%= link_to image_tag("logo.jpg"), root_path %>
+        <span class="navbar-text">
+          <%= link_to "My lists", lists_path %>
+          <%= link_to "New list", new_list_path %>
+        </span>
+      </div>
+    </nav>
     <%= yield %>
+    <br>
   </body>
 </html>

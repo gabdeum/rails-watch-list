@@ -1,0 +1,32 @@
+<div class="list-cover">
+  <img src="<%= @list.url_picture %>" alt="List poster" style="height: 300;">
+  <div class="cover-text">
+    <h1><%= @list.name %></h1>
+  </div>
+  <button type="button" class="btn btn-primary badge-top-right disabled">
+    Bookmarks <span class="badge text-bg-primary"><%= @list.bookmarks.count %></span>
+  </button>
+</div>
+<div class="container">
+  <div class="mx-5">
+    <div class="flex-lists-title">
+      <h4>Bookmarks from <%= @list.name %> list</h2>
+      <%= link_to "Add a bookmark", new_list_bookmark_path(@list), class: "btn btn-primary" %>
+    </div>
+    <div class="bookmarks-grid">
+      <% @list.bookmarks.each do |bookmark| %>
+        <div class="card-movie">
+          <img src="<%= bookmark.movie.poster_url %>" alt="Movie poster">
+          <div class="card-movie-content">
+            <p class="movie-title"><%= bookmark.movie.title %><span class="movie-rating"> • <%= bookmark.movie.rating %> <i class="fa-solid fa-star"></i></span></p>
+            <p class="movie-overview"><%= bookmark.movie.overview %></p>
+            <div class="flex-movie-footer">
+              <p><i class="fa-solid fa-quote-left"></i> <%= bookmark.comment %></p>
+              <%= link_to "Delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

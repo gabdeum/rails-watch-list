@@ -1,0 +1,53 @@
+.card-movie {
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+  border-radius: 2px;
+  overflow: hidden;
+
+  img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card-movie-content {
+
+    padding: 16px;
+    font-size: 14px;
+
+    .movie-title {
+      color: $black;
+      font-weight: bolder;
+    }
+
+    .movie-rating {
+      color: $gray;
+      font-weight: lighter;
+    }
+
+    .fa-star {
+      color: $yellow;
+    }
+
+    .movie-overview{
+      font-size: 12px;
+    }
+
+    .flex-movie-footer {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+
+      p {
+        margin: 0px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+    }
+
+  }
+
+}

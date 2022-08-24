@@ -1,0 +1,42 @@
+.list-cover {
+
+  position: relative;
+  margin-bottom: 32px;
+
+  img {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+  }
+
+  .cover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%); /* iOS */
+    margin: 0;
+    color: $light-gray;
+    text-align: center;
+  }
+
+  .badge-top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+
+}
+
+.bookmarks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .bookmarks-grid {
+    grid-template-columns: 1fr;
+  }
+}
