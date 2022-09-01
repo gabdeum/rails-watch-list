@@ -15,7 +15,9 @@
       <% @lists.each do |list| %>
         <a href="lists/<%= list.id %>">
           <div class="card-simple">
-            <%= cl_image_tag list.cover.key, alt: "List #{list.cover.name}" %>
+            <% if list.cover.attached? %>
+              <%= cl_image_tag list.cover.key, alt: "List #{list.cover.name}" %>
+            <% end %>
             <h5><%= list.name %></h5>
           </div>
         </a>

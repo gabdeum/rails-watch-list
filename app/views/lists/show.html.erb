@@ -1,5 +1,7 @@
 <div class="list-cover">
-  <%= cl_image_tag @list.cover.key, height: 300, alt: "Image of #{@list.cover.name}" %>
+  <% if @list.cover.attached? %>
+    <%= cl_image_tag @list.cover.key, height: 300, alt: "Image of #{@list.cover.name}" %>
+  <% end %>
   <div class="cover-text">
     <h1><%= @list.name %></h1>
   </div>
