@@ -8,7 +8,7 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = List.new(params[:list].permit(:name, :url_picture))
+    @list = List.new(params[:list].permit(:name, :cover))
     if @list.save
       redirect_to list_path(@list)
     else
