@@ -1,5 +1,5 @@
 <div class="list-cover">
-  <img src="<%= @list.url_picture %>" alt="List poster" style="height: 300;">
+  <%= cl_image_tag @list.cover.key, height: 300, alt: "Image of #{@list.cover.name}" %>
   <div class="cover-text">
     <h1><%= @list.name %></h1>
   </div>

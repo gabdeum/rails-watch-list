@@ -15,7 +15,7 @@
       <% @lists.each do |list| %>
         <a href="lists/<%= list.id %>">
           <div class="card-simple">
-            <img src="<%= list.url_picture %>" alt="List poster">
+            <%= cl_image_tag list.cover.key, alt: "List #{list.cover.name}" %>
             <h5><%= list.name %></h5>
           </div>
         </a>
