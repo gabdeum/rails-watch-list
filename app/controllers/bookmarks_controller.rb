@@ -12,6 +12,7 @@ class BookmarksController < ApplicationController
       redirect_to list_path(params[:list_id])
     else
       @list = List.find(params[:list_id])
+      @review = Review.new
       render 'lists/show', status: :unprocessable_entity
     end
   end
