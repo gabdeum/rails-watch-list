@@ -29,7 +29,7 @@
         <% end %>
       </div>
     </div>
-    <div class="col-12 col-lg-4 ps-4">
+    <div class="col-12 col-lg-4 ps-4 mb-5">
       <h4>New bookmark for <%= @list.name %> list</h4>
       <%= simple_form_for [@list, @bookmark] do |f| %>
         <%= f.input :movie_id, collection: Movie.all, prompt: 'Select movie', label: false, as: :select, input_html: {data: {controller: "tom-select"}} %>
