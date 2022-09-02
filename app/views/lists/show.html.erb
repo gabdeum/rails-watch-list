@@ -45,7 +45,7 @@
           review.rating.times do
             @rating_stars << '<i class="fa-solid fa-star"></i>'
           end %>
-          <p><%= sanitize @rating_stars %> <span><%= review.created_at %></span></p>
+          <p><%= sanitize @rating_stars %> <span style="font-size: 12px;"><%= review.created_at.strftime("Added on %m/%d/%Y at %H:%M") %></span></p>
           <p><%= review.comment %></p>
           <hr>
         <% end %>
